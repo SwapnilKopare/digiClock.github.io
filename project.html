@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="/clock.css">
+    <style>
+        body {
+          /* background-image: url('img.jpg'); */
+        }
+        </style>
+        
+</head>
+<body >
+
+    <script>
+
+        let a;
+        let time;
+        let date;
+    setInterval(() => {
+        a = new Date(); 
+        time = a.getHours() + " : " + a.getMinutes() + " : " + a.getSeconds();
+        date = a.toLocaleDateString();
+        document.getElementById('time').innerHTML = time +" - "+ date;
+    }, 1000);
+
+    </script>
+
+    <div class="container">
+        <h1>Current Time is:</h1> <span id="time"></span>
+    </div>
+
+</body>
+</html>
